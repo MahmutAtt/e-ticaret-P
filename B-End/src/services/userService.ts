@@ -11,11 +11,11 @@ interface RegisterParams{
 export const register = async({ firstName, lastName, email, password}:RegisterParams)=>{
     const findUser = await userModel.findOne({email})
     if(findUser){
-        return{error:{message:"user already existes!"}}
+        return{data:"incorrect email or password!!",statusCode:400}
     }
     const newUser = new userModel({email,password,firstName,lastName})
     await newUser.save()
-    return newUser;
+    return {data:newUser,statusCode:200};
 
 }
 
