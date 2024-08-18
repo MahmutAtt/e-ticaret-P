@@ -15,5 +15,5 @@ const productSchema = new Schema<IProduct>({
     price:{type: Number , required:  true},
     stock:{type: Number , required:  true , default:0},
 });
-const productModle = mongoose.model<IProduct>('Product',productSchema);
+const productModle = mongoose.model<IProduct>('product',productSchema);
 export default productModle;

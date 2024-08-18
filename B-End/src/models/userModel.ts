@@ -1,6 +1,8 @@
 import mongoose,{Schema,Document} from "mongoose";
 //Kullanıcı Arayüzü (IUser) Tanımlaması:
 export interface IUser extends Document{
+    _id: string;
+    
     firstName:string;
     lastName:string;
     email:string;
