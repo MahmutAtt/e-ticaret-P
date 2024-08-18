@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
 const app = express()
 const port = 3001;
+app.use(express.json());
 
 
 
